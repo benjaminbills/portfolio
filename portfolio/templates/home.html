@@ -1,12 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Welcome</h1>
-</body>
-</html>
+{%extends 'base.html'%}
+{% load static%}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+  <div class="row pt-4">
+    <div class="col-lg-5 col-md-5 col-sm-12">
+      <img class="profile-photo" src="{% static '/images/benjamin.jpg' %}" alt="" >
+    </div>
+  <div class="col-lg-7 col-md-7 col-sm-12">
+    <h1>Benjamin Obafemi</h1>
+      <div class="my-details">
+        <h3>About me</h3>
+        <p>
+          I am a web developer. <br>
+          I love writing codes.
+        </p>
+      </div>
+  </div>
+</div>
+  <div class="skills pt-4">
+    <h2>Skills</h2>
+    <table class="table table-striped table-hover">
+      <tbody>
+        <tr>
+          <th scope="row">Languages</th>
+          <td>Python, Javascript, TypeScript, PostgreSQL, CSS, Sass, HTML</td>
+        </tr>
+        <tr>
+          <th scope="row">Frameworks/lib</th>
+          <td>Django, Flask, Angular, Bootstrap, jQuery</td>
+        </tr>
+        <tr>
+          <th scope="row">Tools</th>
+          <td colspan="2">Git</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pt-4">
+    <h2 class="text-center">Completed Projects</h2>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/app.js'%}"></script>
+{% endblock  %}
