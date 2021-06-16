@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $.ajax({
     method: "GET",
-    url: "http://127.0.0.1:8000/api",
+    url: "https://benjaminportfolio-v1.herokuapp.com/api",
     dataType: "json",
   }).done(function (data) {
     console.log(data);
