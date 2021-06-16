@@ -159,3 +159,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
+
+# Cloudinary setup
+MEDIA_URL = '/Portfolio/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME':config('CLOUD_NAME'),
+    'API_KEY':config('CLOUDINARY_APIKEY'),
+    'API_SECRET':config('CLOUDINARY_APISECRET')
+}

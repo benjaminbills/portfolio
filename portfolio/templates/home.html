@@ -36,13 +36,15 @@
         </tr>
         <tr>
           <th scope="row">Tools</th>
-          <td colspan="2">Git</td>
+          <td colspan="2">Git, Bash</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="pt-4">
     <h2 class="text-center">Completed Projects</h2>
+    <div class="project row pt-4" id="project">
+    </div>
   </div>
 </div>
 
@@ -50,5 +52,10 @@
 {% endblock %}
 
 {% block script %}
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+crossorigin="anonymous"
+></script>
 <script src="{% static 'js/app.js'%}"></script>
 {% endblock  %}
