@@ -8,3 +8,4 @@ class Project(models.Model):
   description=models.TextField()
   link=models.URLField()
   githublink=models.URLField(blank=True, default='Blank')
+  techUsed=models.CharField(max_length=500, blank=True, default='Tech used')
