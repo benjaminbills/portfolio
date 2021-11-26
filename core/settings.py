@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'api',
     'cloudinary_storage',
     'cloudinary',
+    'django-cors-headers'
 ]
 
 MIDDLEWARE = [
@@ -159,7 +160,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Cloudinary setup
 MEDIA_URL = '/Portfolio/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
