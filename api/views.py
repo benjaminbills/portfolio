@@ -19,9 +19,13 @@ def projectList(request):
 @api_view(['POST'])
 def SendMail(request):
   data = request.data
-  message = data['message']
-  name = data['name']
-  email = data['email']
-  send_email(name, message, email)
-  message = {'detail':'successfully saved data'}
-  return Response(message,status=status.HTTP_200_OK)
+  try:
+    message = data['message']
+    name = data['name']
+    email = data['email']
+    send_email(name, message, email)
+    message = {'detail':'successfully sent message'}
+    return Response(message,status=status.HTTP_200_OK)
+  except:
+    message = {'detail':'fill in your name, email, message'}
+    return Response(message,status=status.HTTP_406_NOT_ACCEPTABLE)
