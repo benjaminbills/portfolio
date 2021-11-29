@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import ProjectList
+from .views import SendMail, projectList
 
 app_name = 'api'
 
 urlpatterns = [
-    path('', ProjectList.as_view(), name='list'),
+    path('', projectList, name='list'),
+    path('email', SendMail, name='send-email')
 ]

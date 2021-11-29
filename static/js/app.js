@@ -1,11 +1,11 @@
 $(document).ready(function () {
   $.ajax({
     method: "GET",
-    url: "https://benjaminportfolio-v1.herokuapp.com/api",
+    url: "https://benjaminportfolio-v1.herokuapp.com/api/",
     dataType: "json",
   }).done(function (data) {
     console.log(data);
-    $.each(data, function(i, project) {
+    $.each(data, function (i, project) {
       $("div#project").append(
         `<div class="col-md-4 col-sm-12 project-image pb-4">
         <h4>${project.title}</h4>
@@ -24,14 +24,14 @@ $(document).ready(function () {
         </div>
         `
       );
-      $(`#${project.id}img`).click(function() {
+      $(`#${project.id}img`).click(function () {
         $(`#${project.id}des`).show(400);
         $(`#${project.id}img`).hide(400);
-      })
-      $(`#${project.id}des`).click(function() {
+      });
+      $(`#${project.id}des`).click(function () {
         $(`#${project.id}img`).show(400);
         $(`#${project.id}des`).hide(400);
-      })
-    })
+      });
+    });
   });
 });
