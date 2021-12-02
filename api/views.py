@@ -18,6 +18,7 @@ def projectList(request):
 
 @api_view(['POST'])
 def SendMail(request):
+  ## send message.
   data = request.data
   try:
     message = data['message']
